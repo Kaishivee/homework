@@ -50,6 +50,12 @@ elif c < b < a:
     print(b)
 elif a < c < b:
     print(c)
+elif a < b < c:
+    print(b)
+elif b < c < a:
+    print(c)
+elif b < a < c:
+    print(a)
 else:
     print(':(')
 
@@ -70,3 +76,26 @@ elif (col1 == 'желтый' and col2 == 'синий') or (col1 == 'синий' 
     print('зеленый :)')
 else:
     print(' УПС, ОШИБОЧКА ВЫШЛА :((( ')
+
+print()
+
+a1 = int(input('Введите начало первого отрезка: '))        #ЗАДАЧА 7
+b1 = int(input('Введите конец первого отрезка: '))
+a2 = int(input('Введите начало второго отрезка: '))
+b2 = int(input('Введите конец второго отрезка: '))
+
+if a1 < b1 and a2 < b2:
+    if (b1 == a2 and b2 > a1):
+        print('Пересечение в точке', b1 or a2)
+    elif (b2 == a1 and a2 < b1):
+        print('Пересечение в точке', b2 or a1)
+    elif a1 < a2 < b1 < b2:
+        print(a2, 'входит в отрезок от', a1, 'до', b1)
+    elif a2 < a1 < b2 < b1:
+        print(a1, 'входит в отрезок от', a2, 'до', b2)
+    elif a1 < a2 < b2 < b1:
+        print('Отрезок от', a2, 'до', b2, 'входит в отрезок от', a1, 'до', b1)
+    elif a2 < a1 < b1 < b2:
+        print('Отрезок от', a1, 'до', b1, 'входит в отрезок от', a2, 'до', b2)
+    else:
+        print('Пустое множество')
