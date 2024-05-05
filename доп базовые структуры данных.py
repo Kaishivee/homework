@@ -5,7 +5,7 @@ pup = sorted(students)
 
 grade_list1 = []
 for i in grades:
-    aver = round(sum(i) / len(grades))
+    aver = round(sum(i) / len(grades), 3)
     grade_list1.append(aver)
 
 dict(zip(pup, grade_list1))
