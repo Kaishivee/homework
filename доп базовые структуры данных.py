@@ -5,8 +5,8 @@ pup = sorted(students)
 
 grade_list1 = []
 for i in grades:
-    aver = (sum(i) / len(grades))
+    aver = (sum(i) / len(i))
     grade_list1.append(aver)
 
-dict(zip(pup, grade_list1))
-print(dict(zip(pup, grade_list1)))
+res = zip(pup, grade_list1)
+print(dict(res))
